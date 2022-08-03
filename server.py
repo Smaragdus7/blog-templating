@@ -31,7 +31,6 @@ def show_post(index):
 def contact():
     if request.method == "POST":
         data_f = request.form
-        data_f = request.form
         send_email(data_f["name"], data_f["email"], data_f["phone"], data_f["message"])
         return render_template("contact.html", msg_sent=True)
     return render_template("contact.html", msg_sent=False)
